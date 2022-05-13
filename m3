@@ -24,3 +24,4 @@ Examples:
   ${PROGRAMME} uninstall --index 1
   ${PROGRAMME} uninstall --name docker
 "
+echo "${USAGE}"
