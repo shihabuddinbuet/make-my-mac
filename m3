@@ -24,4 +24,24 @@ Examples:
   ${PROGRAMME} uninstall --index 1
   ${PROGRAMME} uninstall --name docker
 "
-echo "${USAGE}"
+#echo "${USAGE}"
+
+if [ "$#" -gt 0 ]; then
+  while [ "$#" -gt 0 ]; do
+    echo $1
+    case $1 in
+    show)
+      echo "Showing supported tools:"
+      ;;
+    *)
+      echo "${USAGE}"
+    esac
+    shift
+  done
+else
+   echo "${USAGE}"
+fi
+
+function options() {
+
+}
